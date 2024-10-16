@@ -1,15 +1,316 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./partials/mixins.scss";
+@import "./partials/variables.scss";
 
-main {
-    background-color: lightcoral;
+header{
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    background-color: white;
+
+    div{
+
+      width: 80%;
+      margin: 0 auto;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div{
+
+        img{
+
+          width: 80px;
+          height: 80px;
+        }
+
+      }
+
+      ul{
+
+        @include list-ul;
+        display: flex;
+
+
+        li{
+
+          padding: 20px;
+
+          a{
+           @include style-a;
+           color: $my-color-link;
+            &:hover{
+              cursor: pointer;
+              color: $my-blue;
+              border-bottom:3px solid $my-blue;
+            }
+          }
+
+        }
+      }
+
+    }
 }
 
-.gatto-img {
-    height: 200px;
+main{
+
+    background-color: black;
+    width: 100%;
+
+
+      .bg-img-main{
+
+        width: 100%;
+        height: 500px;
+        background-image: url('../img/jumbotron.jpg');
+        background-size: cover;
+
+      }
+
+      .container-cards{
+
+        width: 80%;
+        margin: 0 auto;
+
+        .cards{
+
+          width: 100%;
+          flex-wrap: wrap;
+          color: white;
+          display: flex;
+          padding: 50px 0;
+
+
+        .my-card{
+
+
+            margin:40px;
+
+            img{
+
+            width: 200px;
+            height: 200px;
+            object-position: top;
+
+            }
+
+            h4{
+
+              padding-top: 10px;
+              color: $my-color-link;
+
+            }
+        }
+    }
+        .my-btn{
+
+          background-color: $my-blue;
+          color: white;
+          font-weight: bold;
+          border: none;
+
+        }
+
+        .my-btn.top{
+          margin-top:-30px;
+          padding: 20px;
+          font-size: 20px;
+
+        }
+
+        .my-btn.bottom{
+
+          width: 200px;
+          margin-left:calc(50% - 100px);
+          padding: 10px;
+          margin-bottom: 20px;
+
+        }
+
+
+      }
+
 }
 
-.gatto-bg {
-    height: 200px;
-    background-image: url('../img/gatto.webp');
-    background-size: contain;
-}
+footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
+
+    .container-footer{
+
+
+      width: 100%;
+
+
+
+      .footer-top{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $my-blue;
+        width: 100%;
+        height: 200px;
+
+
+        ul{
+          @include list-ul;
+          width: 80%;
+          height: 100%;
+          margin: 0 auto;
+          padding: 40px 10px;
+          display: flex;
+          justify-content: space-between;
+
+
+          li{
+            display: flex;
+            color: white;
+            align-items: center;
+
+            div > img{
+
+              width: 100px;
+              align-self: center;
+
+            }
+            a{
+              @include style-a;
+              padding: 0 30px;
+              align-self: center;
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+      }
+
+      .footer-bottom-top{
+
+        display: flex;
+        width: 80%;
+        margin: 0 auto ;
+        padding-top: 150px;
+
+        .logo-footer{
+
+          position: relative;
+          right: -10%;
+          width: 50%;
+
+        }
+
+        .container-link-utili{
+
+          padding: 50px 0;
+          width: 50%;
+          height: 500px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+
+          ul{
+
+            @include list-ul;
+            padding-bottom: 10px;
+            padding-left: 60px;
+
+            h4{
+              color: white;
+              font-weight: bolder;
+              padding-bottom: 10px;
+            }
+
+            li{
+
+              padding: 2px 0;
+
+              a{
+                @include style-a;
+                color: $my-color-link;
+                &:hover{
+                  color: white;
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+      .container-bg-grey-footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100px;
+        background-color:$my-bg-grey;
+
+
+        .footer-bottom-bottom{
+
+          width: 80%;
+          height: 100px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+        div{
+          button{
+            cursor: pointer;
+            padding: 10px 8px;
+            border: 2px solid $my-blue;
+            background-color: $my-bg-grey;
+            color: white;
+            font-weight: bold;
+          }
+        }
+
+
+        .icons-social{
+
+          ul{
+
+            @include list-ul;
+            display: flex;
+            align-items: center;
+
+
+            h4{
+
+              color: $my-blue;
+              padding-left: 10px;
+            }
+
+            li{
+
+              a{
+
+                display: block;
+                width: 50px;
+                padding: 0 10px;
+
+              }
+            }
+          }
+
+        }
+
+      }
+      }
+
+    }
+
+  }
+
+
+

@@ -1,39 +1,100 @@
 @php
+
     $links = [
         [
-            'url' => '/',
-            'label' => 'Home',
-            'active' => true,
+          'label'=> 'CHARACTER',
+          'url'=> '#',
+          'active'=>false
+
         ],
         [
-            'url' => '/chi-siamo',
-            'label' => 'Chi siamo',
-            'active' => true,
+          'label'=> 'COMICS',
+          'url'=> '#',
+          'active'=>true
+
         ],
         [
-            'url' => '/contatti',
-            'label' => 'Contatti',
-            'active' => false,
+          'label'=> 'MOVIES',
+          'url'=> '#',
+          'active'=>false
+
         ],
+        [
+          'label'=> 'TV',
+          'url'=> '#',
+          'active'=>false
+
+        ],
+        [
+          'label'=> 'GAMES',
+          'url'=> '#',
+          'active'=>false
+
+        ],
+        [
+          'label'=> 'COLLECTIBLES',
+          'url'=> '#',
+          'active'=>false
+
+        ],
+        [
+          'label'=> 'VIDEOS',
+          'url'=> '#',
+          'active'=>false
+
+        ],
+        [
+          'label'=> 'FANS',
+          'url'=> '#',
+          'active'=>false
+
+        ],
+        [
+          'label'=> 'NEWS',
+          'url'=> '#',
+          'active'=>false
+
+        ],
+        [
+          'label'=> 'SHOP',
+          'url'=> '#',
+          'active'=>false
+
+        ]
+
     ];
 @endphp
 
 <header>
-    <nav>
+
+      <div>
+
+        <div>
+
+          <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC logo">
+
+        </div>
+
         <ul>
-            @foreach ($links as $link)
-                <li>
-                    @if ($link['active'])
-                        <a href="{{ $link['url'] }}">
-                            {{ $link['label'] }}
-                        </a>
-                    @else
-                        <del>
-                            {{ $link['label'] }}
-                        </del>
-                    @endif
-                </li>
-            @endforeach
+
+            @foreach ($links as $link )
+
+            <li>
+
+            <a href="#">
+
+              {{ $link['label'] }}
+
+            </a>
+
+          </li>
+
+          @endforeach
+
+
         </ul>
-    </nav>
+
+      </div>
+
 </header>
+
