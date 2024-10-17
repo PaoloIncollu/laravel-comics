@@ -1,5 +1,9 @@
-<main>
+@extends('layouts.app')
 
+@section('page-title', 'HomePage')
+
+
+@section('main-content')
     <div class="bg-img-main">
 
     </div>
@@ -50,8 +54,4 @@
         </button>
 
     </div>
-
-
-
-</main>
-
+@endsection

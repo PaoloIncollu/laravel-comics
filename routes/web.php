@@ -21,7 +21,7 @@ $listInfo = config('listInfo');
 $linksComic = config('linksComic');
 $listSocial = config('listSocial');
 $movieCards = config('comics');
-    return view('welcome', compact('menuLinks','movieCards','listInfo','linksComic','listSocial'));
+    return view('main', compact('menuLinks','movieCards','listInfo','linksComic','listSocial'));
 
 })->name('homePage');
 
