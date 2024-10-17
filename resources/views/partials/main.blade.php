@@ -1,7 +1,3 @@
-@php
-    $movieCards = config('comics');
-@endphp
-
 <main>
 
     <div class="bg-img-main">
@@ -10,49 +6,52 @@
 
     <div class="container-cards">
 
-      <button class="my-btn top">
+        <button class="my-btn top">
 
-        CURRENT SERIES
+            CURRENT SERIES
 
-      </button>
+        </button>
 
-      <div class="row cards">
+        <div class="row cards">
 
-        @foreach ($movieCards as $key=> $card)
+            @foreach ($movieCards as $key=> $card)
 
 
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2 " >
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 " >
 
-                <div class="my-card ">
+                    <div class="my-card ">
 
-                    <img src="{{ $card['thumb'] }}" alt="{{ $card['series']}}">
+                        <img src="{{ $card['thumb'] }}" alt="{{ $card['series']}}">
 
-                    <div class="my-card-body">
+                        <div class="my-card-body">
 
-                        <h4>
+                            <h4>
 
-                            {{ $card['series']}}
+                                {{ $card['series']}}
 
-                        </h4>
+                            </h4>
+
+                        </div>
+
 
                     </div>
 
-
                 </div>
 
-            </div>
-        @endforeach
-      </div>
+            @endforeach
 
-      <button class="my-btn bottom">
+        </div>
 
-        LOAD MORE
+        <button class="my-btn bottom">
 
-      </button>
+            LOAD MORE
+
+        </button>
+
     </div>
 
 
 
-  </main>
+</main>
 
